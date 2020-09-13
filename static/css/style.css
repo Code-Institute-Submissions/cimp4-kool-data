@@ -13,3 +13,19 @@ nav {
 nav ul a {
     color: white !important;
 }
+
+
+/* All classes related to the Recipes.html Page Materialize Card */
+
+.btn_small {
+    height: 24px;
+    width:80px !important;
+    line-height: 24px;
+    margin: 5px 5px;
+    padding:0 0.5em;
+}
+
+
+.bgcardrev{
+    background-image: linear-gradient(white, white, powderblue) !important;
+}
