@@ -9,7 +9,7 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 @app.route('/')
 def hello():
-    return 'Hello Recipe World Testing
+    return 'Hello Recipe World Testing'
 
 
 if __name__ == '__main__':
