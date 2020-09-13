@@ -1,0 +1,15 @@
+/* All classes related to the Navbar */
+nav {
+    color: #fff;
+    background-color: #0fb7ca;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+.side-nav {
+    background-color: #0fb7ca !important;
+}
+
+nav ul a {
+    color: white !important;
+}

@@ -8,8 +8,10 @@ app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 @app.route('/')
-def hello():
-    return 'Hello Recipe World Testing'
+@app.route('/get_recipes')
+def get_recipes():
+    return render_template('recipes.html', 
+    recipes=mongo.db.recipes.find())
 
 
 if __name__ == '__main__':
