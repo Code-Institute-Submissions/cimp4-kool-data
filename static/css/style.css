@@ -30,6 +30,14 @@ nav ul a {
     background-image: linear-gradient(white, white, powderblue) !important;
 }
 
+/* Category Type Card */
+.myImgStyle {
+    width:100%;height:175px; 
+    background-position: center center !important;
+    background-size: contain !important;
+    filter: brightness(0.5);
+}
+
 /* All Classes Related to recipecomplete.html */
 .authname {
     font-size: 10px;
