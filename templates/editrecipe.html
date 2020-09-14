@@ -43,57 +43,52 @@
           <div class="input-field col s12">
             <i class="material-icons prefix">language</i>
             <input id="recipe_img_url" name="recipe_img_url" type="url" class="validate" required="" aria-required="true" value="{{recipe.recipe_img_url}}">
-            <label for="input_text">Insert Image URL Link</label>
+            <label for="recipe_img_url">Insert Image URL Link</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">info</i>
             <input id="recipe_description" name="recipe_description" type="text" class="materialize-textarea" required="" aria-required="true" value="{{recipe.recipe_description}}" data-length="20">
-            <label for="input_text">Short Description</label>
+            <label for="recipe_description">Short Description</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">av_timer</i>
             <input id="recipe_prep_time" name="recipe_prep_time" type="number" class="validate" required="" aria-required="true" value="{{recipe.recipe_prep_time}}">
-            <label for="icon_prefix">Prep Time (min)</label>
+            <label for="recipe_prep_time">Prep Time (min)</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">timer</i>
             <input id="recipe_cooking_time" name="recipe_cooking_time" type="number" class="validate" required="" aria-required="true" value="{{recipe.recipe_cooking_time}}" >
-            <label for="icon_prefix">Cooking Time (min)</label>
+            <label for="recipe_cooking_time">Cooking Time (min)</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">av_timer</i>
             <input id="recipe_total_time" name="recipe_total_time" type="number" class="validate" required="" aria-required="true" value="{{recipe.recipe_total_time}}">
-            <label for="icon_prefix">Total Time (min)</label>
+            <label for="recipe_total_time">Total Time (min)</label>
           </div>
         </div>
         <div class="input-field col s12">
           <i class="material-icons prefix myicon">groups</i>
           <input id="recipe_servings" name="recipe_servings" type="number" class="validate" required="" aria-required="true" value="{{recipe.recipe_servings}}">
-          <label for="icon_prefix">Servings</label>
+          <label for="recipe_servings">Servings</label>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">list</i>
-            <input id="recipe_ingredients" name="recipe_ingredients" type="tel" class="validate" required="" aria-required="true" value="{{recipe.recipe_ingredients}}">
-            <label for="icon_telephone">Ingredients</label>
-          </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">list</i>
+          <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea" required="" aria-required="true" value="{{recipe.recipe_ingredients}}"></textarea>
+          <label for="recipe_ingredients">Ingredients</label>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">assignment</i>
-            <input id="recipe_instructions" name="recipe_instructions" type="tel" class="validate" required="" aria-required="true" value="{{recipe.recipe_instructions}}">
-            <label for="icon_telephone">Preparation</label>
-          </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">assignment</i>
+          <textarea id="recipe_instructions" name="recipe_instructions" class="materialize-textarea" required="" aria-required="true" value="{{recipe.recipe_instructions}}"></textarea>
+          <label for="recipe_instructions">Preparation</label>
         </div>
-      </div>
       <div class="row center-align">
           <button class="btn waves-effect waves-light orange" type="submit" name="action">Update Recipe
             <i class="material-icons right">playlist_add</i>
