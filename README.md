@@ -1,14 +1,7 @@
 # Data Centric Milestone - [Kool Recipes](https://kool-recipes.herokuapp.com/)
-#### Developed by: Christopher Koolman
+Developed by: Christopher Koolman
 
-
-#### Milestone Project Description:
-
-The project is focused on Project Idea Nr. 1. 
-To develop an Online Cookbook/Recipe website/app, which the site owner's goal is to promote a brand of cooking tools. The website/app gives the user the ability to Create, Read, Update and Delete (CRUD) functionalities.
-The user should be able to view and access the cooking recipes. The user is also able to enjoy the additional features such as, Promos Ad Page (Ads of Cookingware on the landing page, and dedicated page illustrating promotions) and option to "Like" a recipe.  
-
-##Table Of content
+## Table Of content
 1. [Database Schema](#dbsch)
 2. [User Experience Approach](#ux)
 3. [Technologies Used](#techu)
@@ -16,6 +9,12 @@ The user should be able to view and access the cooking recipes. The user is also
 5. [How To Deploy](#deploy)
 6. [How To Deploy To Heroku From GitPod](#deplgitp)
 7. [Credits](#credit)
+
+#### Milestone Project Description:
+
+The project is focused on Project Idea Nr. 1. 
+To develop an Online Cookbook/Recipe website/app, which the site owner's goal is to promote a brand of cooking tools. The website/app gives the user the ability to Create, Read, Update and Delete (CRUD) functionalities.
+The user should be able to view and access the cooking recipes. The user is also able to enjoy the additional features such as, Promos Ad Page (Ads of Cookingware on the landing page, and dedicated page illustrating promotions) and option to "Like" a recipe.  
 
 <a name="dbsch"></a>
 ## Databse Schema
