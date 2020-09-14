@@ -1,4 +1,4 @@
-# Data Centric Milestone - [Kool Recipes](https://kool-recipes.herokuapp.com/)
+# Data Centric Milestone - [Kool Recipes](http://kool-recipes.herokuapp.com/get_recipes)
 Developed by: Christopher Koolman
 
 ## Table Of content
