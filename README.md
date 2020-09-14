@@ -8,6 +8,16 @@ The project is focused on Project Idea Nr. 1.
 To develop an Online Cookbook/Recipe website/app, which the site owner's goal is to promote a brand of cooking tools. The website/app gives the user the ability to Create, Read, Update and Delete (CRUD) functionalities.
 The user should be able to view and access the cooking recipes. The user is also able to enjoy the additional features such as, Promos Ad Page (Ads of Cookingware on the landing page, and dedicated page illustrating promotions) and option to "Like" a recipe.  
 
+##Table Of content
+1. [Database Schema](#dbsch)
+2. [User Experience Approach](#ux)
+3. [Technologies Used](#techu)
+4. [Testing](#test)
+5. [How To Deploy](#deploy)
+6. [How To Deploy To Heroku From GitPod](#deplgitp)
+7. [Credits](#credit)
+
+<a name="dbsch"></a>
 ## Databse Schema
 
 The project has been created with the following MongoDB Collections:
@@ -48,6 +58,7 @@ All fields included in a ads:
 
 Ads are dynamically populated on the "Home Page", "Recipe Page" and "Promos Page".
 
+<a name="ux"></a>
 ## User Experience Approach
 
 #### User stories
@@ -60,7 +71,7 @@ Ads are dynamically populated on the "Home Page", "Recipe Page" and "Promos Page
 6. Users are only able to edit Ads.
 7. Users can Like a recipe from the "Recipes Page"(landing page with all dynamically generated Recipe Cards) or in the "Recipe Page"(Recipe Specific Page illustrating the complete Recipe)
 
-
+<a name="techu"></a>
 ## Technologies used:
 - [HTML](https://www.w3schools.com/html/) - W3C Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
 - [CSS](https://www.w3schools.com/css/) - W3C Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
@@ -73,6 +84,7 @@ Ads are dynamically populated on the "Home Page", "Recipe Page" and "Promos Page
 - [JQuery](https://jquery.com)
     - The use for **JQuery** si to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
 
+<a name="test"></a>
 ## Testing
 
 #### Create Read Update Delete (CRUD) Testing
@@ -103,6 +115,7 @@ Good Coding Practice Requires that all codes are validated through online valida
 
 #### Development Troubleshooting
 
+<a name="deploy"></a>
 ## How To Deploy
 - The project was deployed on [Heroku](https://www.heroku.com)
 - Dependencies require that a Procfile and requirements.txt are generated/created.
@@ -113,7 +126,8 @@ Good Coding Practice Requires that all codes are validated through online valida
 - Link the existing [Mongodb](https://www.mongodb.com)
 - Deployed website can be found [here](http://kool-recipes.herokuapp.com/get_recipes).
 
-## How to Deploy to Production on Heroku
+<a name="deplgitp"></a>
+## How to Deploy to Production on Heroku from GitPod
 
 
 In order to deploy this project on Heroku, please follow these steps:
@@ -185,6 +199,7 @@ $ heroku config:set MONGO_DBNAME='`<dbname>`'
 
 12. Congratulations, the app has been deployed and you can find the URL from the Heroku dashboard `https://dashboard.heroku.com/apps/<projectname>`.
 
+<a name="credit"></a>
 ## Credits
 
 * Google Fonts: https://fonts.google.com
