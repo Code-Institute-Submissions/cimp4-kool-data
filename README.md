@@ -18,7 +18,7 @@ The project has been created with the following MongoDB Collections:
 The main collection is the "Recipes" collection, because it basically includes the related collection selection possibility in order to complete the complete recipe page.
 
 
-Recipes are added by completing the [Add Recipe](), Categories by completing the [Add Category](), and Ads can be edited by selecting ad>edit button to be directed to the edit page from the [Ad]()
+Recipes are added by completing the [Add Recipe](http://kool-recipes.herokuapp.com/add_recipe), Categories by completing the [Add Category](http://kool-recipes.herokuapp.com/add_category), and Ads can be edited by selecting ad>edit button to be directed to the edit page from the [Ad](http://kool-recipes.herokuapp.com/get_ads)
 All fields included in a recipe: 
 - Recipe Name
 - Recipe Author
