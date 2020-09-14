@@ -111,7 +111,7 @@ Good Coding Practice Requires that all codes are validated through online valida
 - Proceeded to link the environment and Github with Heroku
 - Pushed code to Heroku.
 - Link the existing [Mongodb](https://www.mongodb.com)
-- Deployed website can be found [here](https://cimp4-kool-data.herokuapp.com/).
+- Deployed website can be found [here](http://kool-recipes.herokuapp.com/get_recipes).
 
 ## How to Deploy to Production on Heroku
 
