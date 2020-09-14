@@ -9,7 +9,6 @@
         </div>
       </div>
     </div>
-  </div>
 {% endfor %}
 {% for recipe in recipes %}  
   <div class="row">
@@ -23,6 +22,11 @@
           <div>
             <span class="card-title grey-text text-darken-4 myClassTitle activator"><strong>{{recipe.recipe_name}}</strong><i class="material-icons right">more_vert</i></span>
           </div>
+          <div class="like">
+          <form class="material-icons" action="{{ url_for('like', recipe_id=recipe._id)}}" method="POST">
+            <button class="likesbtn like-count clear" type="submit"><a class="btn-floating btn-medium waves-effect waves-light left blue" type="submit"><i class="material-icons">thumb_up</i></a>{{recipe.likes}}</button></form>
+           
+        </div>
         </div>
         <!-- From here users can upvote their favourite recipes -->
                 
