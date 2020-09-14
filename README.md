@@ -95,11 +95,18 @@ Testing for Creating a Recipe included that all fields were recorded accordingly
 
  
 #### Cross-Device and Browser Testing
-The browser that I used for developing in GitPod was Chrome. I also tested on Mozilla Firefox which didn't show any issues.The only remaining issue is the classes redering of Like Button in the Safari Browser.
-As the most important approach being Mobile First Approach, it was important to test the responsiveness on different devices and browser simulators.
-Website used for testing responsivenes [Am I Responsive ?](http://ami.responsivedesign.is/#)
+The browser that I used for developing in GitPod was Chrome. I also tested on Mozilla Firefox which didn't show any issues.
+
+#### The Remaining Bug
+The only remaining issue is the classes redering of Like Button in the Safari Browser.
+
+- I tried adding a custom class with z-indexing and event tried ```-webkit-mask-image``` to see if it would help, but I'm still not able to fix the bug/issue.
+- I researched different blogs on [Stackoverflow](https://www.stackoverflow.com) in order to find a similar replicated issue. But, unfortunately I was not able to find a solution for the Like button to show correctly in Safari. 
 
 #### Devices tested on included:
+
+As the most important approach being Mobile First Approach, it was important to test the responsiveness on different devices and browser simulators.
+Website used for testing responsivenes [Am I Responsive ?](http://ami.responsivedesign.is/#)
 
 - iPhone 6, 7, 8, X, XS, XS Max
 - Samusng Galaxy S5, S9, S9+
