@@ -187,7 +187,31 @@ $ heroku config:set MONGO_DBNAME='`<dbname>`'
 
 ## Credits
 
+* Google Fonts: https://fonts.google.com
+* Materializecss: https://materializecss.com
+* Pixabay: https://www.pixabay.com
+* Pexels: https://www.pexels.com
+* Color Hex: http://www.color-hex.com
+* Pine Tools: https://pinetools.com
+* Pixlr Photo Editor: https://pixlr.com
+* Photo Resizer: https://www.photoresizer.com
+* jQuery: https://code.jquery.com/
+* W3Newbie Tutorials: https://w3newbie.com/w3newbie-tutorials/
+* W3School (HTML and CSS): https://www.w3schools.com/default.asp
+* Code Institute Modules: Course Resources from all Modules 
+* Stackoverflow: https://stackoverflow.com/ 
+* GitHub: https://www.github.com
+* GitPod: https://www.gitpod.io
+* Animate.CSS: https://animate.style/
+
+### Media
+* Pixabay: https://www.pixabay.com
+* Google: https://www.google.com
+* Pexels: https://www.pexels.com
+* Poster My Wall: https://www.postyermywall.com
+* Link Picture: https://www.linkpicture.com
+
 ### Acknowledgements
-- [All Recipes](https://www.allrecipes.com/recipes/) for helping me fill the database with entries.
+- [All Recipes](https://www.allrecipes.com/recipes/) for utilizing their recipes for my mongodb entries and content.
 - All Credits Go to the Authors/Chefs of all the recipes included.
 
