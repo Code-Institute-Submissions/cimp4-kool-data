@@ -1,4 +1,4 @@
-# Data Centric Milestone - [Kool Recipes](http://kool-recipes.herokuapp.com/get_recipes)
+# Data Centric Milestone - [Kool Recipes](https://kool-recipes.herokuapp.com/)
 Developed by: Christopher Koolman
 
 ## Table Of content
@@ -27,7 +27,7 @@ The project has been created with the following MongoDB Collections:
 The main collection is the "Recipes" collection, because it basically includes the related collection selection possibility in order to complete the complete recipe page.
 
 
-Recipes are added by completing the [Add Recipe](http://kool-recipes.herokuapp.com/add_recipe), Categories by completing the [Add Category](http://kool-recipes.herokuapp.com/add_category), and Ads can be edited by selecting ad>edit button to be directed to the edit page from the [Ad](http://kool-recipes.herokuapp.com/get_ads)
+Recipes are added by completing the [Add Recipe](https://kool-recipes.herokuapp.com/add_recipe), Categories by completing the [Add Category](https://kool-recipes.herokuapp.com/add_category), and Ads can be edited by selecting ad>edit button to be directed to the edit page from the [Ad](https://kool-recipes.herokuapp.com/get_ads)
 All fields included in a recipe: 
 - Recipe Name
 - Recipe Author
@@ -123,7 +123,7 @@ Good Coding Practice Requires that all codes are validated through online valida
 - Proceeded to link the environment and Github with Heroku
 - Pushed code to Heroku.
 - Link the existing [Mongodb](https://www.mongodb.com)
-- Deployed website can be found [here](http://kool-recipes.herokuapp.com/get_recipes).
+- Deployed website can be found [here](https://kool-recipes.herokuapp.com/).
 
 <a name="deplgitp"></a>
 ## How to Deploy to Production on Heroku from GitPod
