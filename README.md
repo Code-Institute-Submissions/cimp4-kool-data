@@ -95,7 +95,7 @@ Testing for Creating a Recipe included that all fields were recorded accordingly
 
  
 #### Cross-Device and Browser Testing
-The browser that I used for developing in GitPod was Chrome. However, I tested on Safari and Mozilla Firefox which didn't show any issues.
+The browser that I used for developing in GitPod was Chrome. I also tested on Mozilla Firefox which didn't show any issues.The only remaining issue is the classes redering of Like Button in the Safari Browser.
 As the most important approach being Mobile First Approach, it was important to test the responsiveness on different devices and browser simulators.
 Website used for testing responsivenes [Am I Responsive ?](http://ami.responsivedesign.is/#)
 
@@ -116,7 +116,6 @@ Good Coding Practice Requires that all codes are validated through online valida
 - [The W3C CSS Validation Service](jigsawjigsaw.w3.org)
 - [The W3C Markup Validation Service](validator.w3.org)
 - [pep8online](http://pep8online.com) - for Python
-- [JSHint Code Quality Tool](jshint.com)
 
 #### Development Troubleshooting
 
