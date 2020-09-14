@@ -25,6 +25,14 @@ def like(recipe_id):
                                                                {'likes': 1}})
     return redirect(url_for('recipe_complete', recipe_id=recipe_id))
 
+# Option to insert a specific recipe into the database
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
+
+# This functionality will render the addrecipe page to insert fields and create a new recipe
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('addrecipe.html', 
