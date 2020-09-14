@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+  <div class="center">
+  <h3>Add Recipe</h3>
+  <p>
+    Add your favourite recipe so you can share it with the world! If there is one thing that can make someone happy is suprising them with a Delicious Home Cooked Meal!
+  </p>
+  </div>
+  <div class="row">
+    <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">article</i>
+          <input id="recipe_name" name="recipe_name" type="text" class="validate" required="" aria-required="true">
+          <label for="icon_prefix">Recipe Name</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">info</i>
+          <input id="recipe_author_name" name="recipe_author_name" type="text" class="validate" required="" aria-required="true">
+          <label for="icon_prefix">Author Name</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">label</i>
+          <select id="category" name="category_name" required class="validate">
+                  <option value="" disabled selected>Choose Category</option>
+                  {% for cat in categories %}
+                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                  {% endfor %}
+                </select>
+                    <label>Category Name</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">add_photo_alternate</i>
+          <input id="recipe_img_url" name="recipe_img_url" type="url" class="validate" required="" aria-required="true">
+          <label for="input_text">Insert Image URL Link</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">info</i>
+          <textarea id="recipe_description" name="recipe_description" type="text" class="materialize-textarea" data-length="20" required="" aria-required="true"></textarea>
+          <label for="recipe_description">Short Description</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">av_timer</i>
+          <input id="recipe_prep_time" name="recipe_prep_time" type="number" class="validate" required="" aria-required="true">
+          <label for="icon_prefix">Prep Time (min)</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">timer</i>
+          <input id="recipe_cooking_time" name="recipe_cooking_time" type="number" class="validate" required="" aria-required="true">
+          <label for="icon_prefix">Cooking Time (min)</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">access_time</i>
+          <input id="recipe_total_time" name="recipe_total_time" type="number" class="validate" required="" aria-required="true">
+          <label for="icon_prefix">Total Time (min)</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">groups</i>
+          <input id="recipe_servings" name="recipe_servings" type="number" class="validate" required="" aria-required="true">
+          <label for="icon_prefix">Servings</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">list</i>
+          <textarea id="recipe_ingredients" name="recipe_ingredients" class="materialize-textarea" required="" aria-required="true"></textarea>
+          <label for="icon_prefix">Ingredients</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix myicon">assignment</i>
+          <textarea id="recipe_instructions" name="recipe_instructions" class="materialize-textarea" required="" aria-required="true"></textarea>
+          <label for="icon_prefix">Preparation</label>
+        </div>
+      </div>
+      <div class="row center-align">
+          <button class="btn waves-effect waves-light center-align blue" type="submit" name="action">Submit Recipe
+            <i class="material-icons right blue">playlist_add</i>
+          </button>
+      </div>
+    </form>
+  </div>
+  
+
+{% endblock %}  
