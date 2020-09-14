@@ -7,12 +7,12 @@
     <div>
         <p class="authname"><i class="material-icons md-48 prefix">person_pin</i>Author: {{recipe.recipe_author_name}}</p>
         <form class="material-icons" action="{{ url_for('like', recipe_id=recipe._id)}}" method="POST">
-        <button class="likesbtn like-count clear" type="submit"><a class="btn-floating btn-medium waves-effect waves-light left blue" type="submit"><i class="material-icons">thumb_up</i></a>{{recipe.likes}}</button></form>
-
+            <button class="likesbtn like-count clear" type="submit"><a class="btn-floating btn-medium waves-effect waves-light left blue" type="submit"><i class="material-icons">thumb_up</i></a>{{recipe.likes}}</button>
+        </form>
     </div>
     <br>
     <div class="card-image waves-effect waves-block waves-light">
-          <img src="{{recipe.recipe_img_url}}" alt="{{recipe.recipe_name}}" style="width:65%;height:65%; background-position: cover;" href="{{url_for('edit_recipe', recipe_id=recipe._id)}}">
+          <img src="{{recipe.recipe_img_url}}" alt="{{recipe.recipe_name}}" style="width:65%;height:65%;" href="{{url_for('edit_recipe', recipe_id=recipe._id)}}">
     </div>
     <br>
     <div>
@@ -32,25 +32,23 @@
         </div>
     </div>
     <div class="paragraph-details col-xs-6 col-md-3 no-side-padding">
-
         <h5>Ingredients</h5>
         <p>{{recipe.recipe_ingredients}}</p>
-
     </div>
     <div class="paragraph-details col-xs-6 col-md-3 no-side-padding">
         <h5>Instrucions</h5>
         <p>{{recipe.recipe_instructions}}</p>
-
     </div>
     {% for ad in ads %}
     <div class="row">
         <div class="col s12 m6 l6">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="{{ad.ad_url_one}}" alt="Ad" style="width:100%;height:275px; background-position: center center;">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="{{ad.ad_url_one}}" alt="Ad" style="width:100%;height:275px;">
+                </div>
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4"><a href="{{url_for('get_ads')}}"><strong>{{ad.ad_promo_name}}</strong></a>
+              <span class="card-title activator grey-text text-darken-4"><a href="{{url_for('get_ads')}}"><strong>{{ad.ad_promo_name}}</strong></a></span>
             </div>
         </div>
     </div> 

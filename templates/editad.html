@@ -3,33 +3,33 @@
 
 
 
-  <div class="center">
-  <h3>Edit Ad</h3>
-  <p>
-    Want to update the Ad? You may do so right here! 
-  </p>
-  </div>
-  <div class="row">
+<div class="center">
+    <h3>Edit Ad</h3>
+    <p>
+        Want to update the Ad? You may do so right here! 
+    </p>
+</div>
+<div class="row">
     <form action="{{ url_for('update_ad', ad_id=ad._id) }}" method="POST" class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">article</i>
-          <input id="ad_promo_name" name="ad_promo_name" type="text" class="validate" required="" aria-required="true" value="{{ad.ad_promo_name}}">
-          <label for="icon_prefix">Promo Name</label>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">article</i>
+                <input id="ad_promo_name" name="ad_promo_name" type="text" class="validate" required="" aria-required="true" value="{{ad.ad_promo_name}}">
+                <label for="ad_promo_name">Promo Name</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">add_photo_alternate</i>
+                <input id="ad_url_one" name="ad_url_one" type="url" class="validate" required="" aria-required="true" value="{{ad.ad_url_one}}">
+                <label for="ad_url_one">Promo Image Link</label>
+            </div>
         </div>
-        <div class="input-field col s12">
-          <i class="material-icons prefix">add_photo_alternate</i>
-          <input id="ad_url_one" name="ad_url_one" type="url" class="validate" required="" aria-required="true" value="{{ad.ad_url_one}}">
-          <label for="icon_prefix">Promo Image Link</label>
-        </div>
-      </div>
-      <div class="row">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Update Ad
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Update Ad
             <i class="material-icons right">playlist_add</i>
-          </button>
-      </div>
+            </button>
+        </div>
     </form>
-  </div>
+</div>
  
 
 {% endblock %}  

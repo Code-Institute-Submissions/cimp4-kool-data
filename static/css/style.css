@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 
-/* All classes related to the Navbar */
+/* All classes related to the Navigation Bar and Side Navigation Bar*/
 nav {
     color: #fff;
     background-color: #0fb7ca;
@@ -43,13 +43,13 @@ nav ul a {
     filter: brightness(0.5);
 }
 
-/* All Classes Related to recipecomplete.html */
+/* Styles the recipe detail page recipecomplete.html Author Name*/
 .authname {
     font-size: 10px;
     font-style: italic !important;
 }
 
-/* Like button styling */
+/* Like button styling on recipe card and recipe detail page */
 .likesbtn {
     border:0;
     background: transparent;
@@ -72,7 +72,7 @@ button.likesbtn.like-count {
     font-size: 13px !important;
 }
 
-/* Slider Banner Text */
+/* Slider Image Banner Text Styling */
 .myBannerText {
     font-family: 'Playball', cursive !important;
 }
