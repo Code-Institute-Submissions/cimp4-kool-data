@@ -113,6 +113,78 @@ Good Coding Practice Requires that all codes are validated through online valida
 - Link the existing [Mongodb](https://www.mongodb.com)
 - Deployed website can be found [here](https://cimp4-kool-data.herokuapp.com/).
 
+## How to Deploy to Production on Heroku
+
+
+In order to deploy this project on Heroku, please follow these steps:
+1. Sign-in or Sign-up on [Heroku](https://www.heroku.com) account
+2. Install Heroku CLI in the gitpod terminal if it hasn't been installed
+
+
+```console
+$ sudo snap install --classic heroku
+
+```
+
+3. If Heroku CLI has been installed, type in the below to login Heroku in order to login from CLI instead of opening a browser window
+
+```console
+$ heroku login -i
+
+```
+
+4. If you have already created an app on the Heroku website you can skip this step, if not type the following command in the CLI so you can create a new app from the CLI. Replace `<the_name_of_the_project>` with the name of your new app for expample: Kool Recipes, heroku will notify if the App Name is available.  
+
+```console
+$ heroku create <name_of_the_project>
+
+```
+
+5. To create a repository enter the following () 
+
+```console
+$ git remote -v
+```
+
+6. Install dotenv with pip3 (will assist for production deployment)
+
+```console
+$ pip install python-dotenv
+```
+
+7. Create a Procfile which inidcates which file needs to be used to get the app running, by running the following command 
+
+```console
+$ echo web: python app.py > Procfile
+```
+
+8. Your app requires key dependencies to run, in order to inlude these run the following command in the CLI 
+
+```console
+$ pip3 freeze --local > requirements.txt 
+```
+
+9. Don't forget to commit the project to github
+
+```console
+$ git add . && git commit -m "Added Procfile and Requirements.txt"
+```
+
+10. You can now push your code to Heroku Master:
+
+```console
+$ git push heroku master
+```
+
+11. IMPORTANT Detail before opening the deployed App URL from Heroku. You will need to add the following environment variables from the CLI to Heroku. Replace `<user>`, `<password>` and `<dbname>`
+
+```console
+$ heroku config:set MONGODB_URI='mongodb+srv://`<user>`:`<password>`'@cluster0,lc0dy.mongodb.net/`<dbname>`?retryWrites=true'
+$ heroku config:set MONGO_DBNAME='`<dbname>`'
+```
+
+12. Congratulations, the app has been deployed and you can find the URL from the Heroku dashboard `https://dashboard.heroku.com/apps/<projectname>`.
+
 ## Credits
 
 ### Acknowledgements
