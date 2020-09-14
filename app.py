@@ -38,6 +38,46 @@ def add_recipe():
     return render_template('addrecipe.html', 
     categories=mongo.db.categories.find())
 
+# This route will find the specific recipe id and render the recipecomplete.html page displaying all the details
+@app.route('/recipe/<recipe_id>')
+def recipe_complete(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("recipecomplete.html", recipe=the_recipe, 
+    ads=mongo.db.ads.find())
+
+# This route will render the editrecipe.html page displaying so the specific recipe can be edited/updated.
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    all_categories =  mongo.db.categories.find()
+    return render_template('editrecipe.html', recipe=the_recipe, categories=all_categories)
+
+# This route will POST any updated fields to the database.
+@app.route('/update_recipe/<recipe_id>', methods=['POST'])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update({'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name':request.form.get('recipe_name'),
+        'recipe_author_name':request.form.get('recipe_author_name'),
+        'category_name':request.form.get('category_name'),
+        'recipe_description':request.form.get('recipe_description'),
+        'recipe_prep_time':request.form.get('recipe_prep_time'),
+        'recipe_cooking_time':request.form.get('recipe_cooking_time'),
+        'recipe_total_time':request.form.get('recipe_total_time'),
+        'recipe_servings':request.form.get('recipe_servings'),
+        'recipe_ingredients':request.form.get('recipe_ingredients'),
+        'recipe_instructions':request.form.get('recipe_instructions'),
+        'recipe_img_url':request.form.get('recipe_img_url')
+    })
+    return redirect(url_for('get_recipes'))
+
+# This route will send the remove command to the database in order to remove the specific recipe permanently
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('get_recipes'))
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

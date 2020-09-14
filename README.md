@@ -95,7 +95,7 @@ As the most important approach being Mobile First Approach, it was important to 
 Overall responsiveness is to my satisfaction. 
 
 #### Code Validation
-Good Coding Practice Requires that all codes are validated through online validators, in order to check if ther are errors.
+Good Coding Practice Requires that all codes are validated through online validators, in order to check if there are errors.
 - [The W3C CSS Validation Service](jigsawjigsaw.w3.org)
 - [The W3C Markup Validation Service](validator.w3.org)
 - [pep8online](http://pep8online.com) - for Python

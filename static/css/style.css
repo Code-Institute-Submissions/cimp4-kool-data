@@ -29,3 +29,9 @@ nav ul a {
 .bgcardrev{
     background-image: linear-gradient(white, white, powderblue) !important;
 }
+
+/* All Classes Related to recipecomplete.html */
+.authname {
+    font-size: 10px;
+    font-style: italic !important;
+}

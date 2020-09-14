@@ -1,0 +1,55 @@
+{% extends 'base.html'%} {% block content %}
+
+    <!--This page will display all information and details of the recipe-->
+    <div>
+        <h4>{{recipe.recipe_name}}</h4>
+    </div>
+    <div>
+        <p class="authname"><i class="material-icons md-48 prefix">person_pin</i>Author: {{recipe.recipe_author_name}}</p>
+        <form class="material-icons" action="{{ url_for('like', recipe_id=recipe._id)}}" method="POST">
+        <button class="likesbtn like-count clear" type="submit"><a class="btn-floating btn-medium waves-effect waves-light left blue" type="submit"><i class="material-icons">thumb_up</i></a>{{recipe.likes}}</button></form>
+
+    </div>
+    <br>
+    <div class="card-image waves-effect waves-block waves-light">
+          <img src="{{recipe.recipe_img_url}}" alt="{{recipe.recipe_name}}" style="width:55%;height:55%; background-position: cover;" href="{{url_for('edit_recipe', recipe_id=recipe._id)}}">
+    </div>
+    <br>
+    <div>
+        <h6><strong>Category: </strong>{{recipe.category_name}}</h6> 
+    </div>
+    <br>
+    <div>
+        <h6><strong>Short Description:</strong> {{recipe.recipe_description}}</h6> 
+    </div>
+    <br>
+    <div class="row">
+        <div>
+            <h6><i class="material-icons medium prefix">av_timer</i><br><strong>Preparation Time: </strong>{{recipe.recipe_prep_time}} Minutes</h6>
+            <h6><i class="material-icons medium prefix">timer</i><br><strong>Cooking Time: </strong>{{recipe.recipe_cooking_time}} Minutes</h6>
+            <h6><i class="material-icons medium prefix">access_time</i><br><strong>Total Time: </strong>{{recipe.recipe_total_time}} Minutes</h6>
+            <h6><i class="material-icons medium prefix">groups</i><br><strong>Servings: </strong>{{recipe.recipe_servings}} Person(s)</h6>
+        </div>
+    </div>
+    <div class="paragraph-details col-xs-6 col-md-3 no-side-padding">
+
+        <h5>Ingredients</h5>
+        <p>{{recipe.recipe_ingredients}}</p>
+
+    </div>
+    <div class="paragraph-details col-xs-6 col-md-3 no-side-padding">
+        <h5>Instrucions</h5>
+        <p>{{recipe.recipe_instructions}}</p>
+
+    </div>
+
+    <div class="inline_actions edit-delete-btns center-align">
+        <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+        <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a>
+
+    </div>
+    
+
+
+
+{% endblock %}
