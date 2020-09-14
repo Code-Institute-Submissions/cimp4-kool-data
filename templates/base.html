@@ -5,26 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
     </head>
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('get_recipes')}}" class="brand-logo">Kool Recipes</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons pulse">menu</i></a>
+                <a href="{{url_for('get_recipes')}}" class="brand-logo"><img src="{{url_for('static', filename='images/koolrecipes.png')}}" width="250" height="auto" href="{{url_for('get_recipes')}}"></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('get_recipes')}}">Home</a></li>
                     <li><a href="{{url_for('get_categories')}}">Categories</a></li>
                     <li><a href="{{url_for('add_recipe')}}">Add Recipe</a></li>
                     <li><a href="{{url_for('add_category')}}">Add Category</a></li>
-                    <li><a href="{{url_for('get_ads')}}"class="waves-effect waves-light btn pulse red">PROMOS<i class="material-icons right">local_offer</i></a></li>
+                    <li><a href="{{url_for('get_ads')}}"class="waves-effect waves-light btn pulse red">PROMO<i class="material-icons right">local_offer</i></a></li>
                 </ul>
                 <ul class="sidenav side-nav" id="mobile-demo">
                     <li><a href="{{url_for('get_recipes')}}">Home</a></li>
                     <li><a href="{{url_for('get_categories')}}">Categories</a></li>
                     <li><a href="{{url_for('add_recipe')}}">Add Recipe</a></li>
                     <li><a href="{{url_for('add_category')}}">Add Category</a></li>
-                    <li><a href="{{url_for('get_ads')}}"class="waves-effect waves-light btn pulse red">PROMOS <i class="material-icons right">local_offer</i></a></li>
+                    <li><a href="{{url_for('get_ads')}}"class="waves-effect waves-light btn pulse red">PROMOTIONS</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,20 +34,19 @@
         <div class="slider">
             <ul class="slides">
               <li>
-                <img src="https://www.linkpicture.com/q/gourmetset2.jpg">
-              </li>
-              <li>
-                <img src="https://www.linkpicture.com/q/presscookad1.jpg">
-                <div class="caption left-align">
-                  <h2>Pressure Cooker Set</h2>
-                  <h4 class="light grey-text text-lighten-3">Enjoy Our Special Offer!!</h4>
+                <img src="{{url_for('static', filename='images/koolrecipesbanner.jpg')}}">
+                <div class="caption center-align ">
+                  <br>
+                  <h1 class="myBannerText" style="font-family: 'Playball', cursive !important;">Let's Cook</h1>
+                  <h3 class="light grey-text text-lighten-3 center-align myBannerText" style="font-family: 'Playball', cursive !important;">Find It, Mix It, Cook It, Enjoy It!!</h3><br>
                 </div>
               </li>
               <li>
-                <img src="https://www.linkpicture.com/q/induction.jpg">
-                <div class="caption right-align">
-                  <h2>This Is Your Chance</h2>
-                  <h4 class="light grey-text text-lighten-3">Don't Miss Out!!</h4>
+                <img src="{{url_for('static', filename='images/koolrecipebanner2.jpg')}}">
+                <div class="caption center-align">
+                  <br>
+                  <h1 style="font-family: 'Playball', cursive !important;">How To Cook</h1>
+                  <h3 class="light grey-text text-lighten-3 center-align " style="font-family: 'Playball', cursive !important;">Easy & Delicious Recipes</h3>
                 </div>
               </li>
             </ul>

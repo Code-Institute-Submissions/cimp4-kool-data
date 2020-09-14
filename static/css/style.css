@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
 /* All classes related to the Navbar */
 nav {
     color: #fff;
@@ -7,12 +9,14 @@ nav {
     line-height: 56px;
 }
 .side-nav {
+    color: #fff;
     background-color: #0fb7ca !important;
 }
 
 nav ul a {
     color: white !important;
 }
+
 
 
 /* All classes related to the Recipes.html Page Materialize Card */
@@ -48,6 +52,7 @@ nav ul a {
 .likesbtn {
     border:0;
     background: transparent;
+    background-color: white !important;
     text-align:right;
     padding-right: 0;
     
@@ -64,4 +69,9 @@ nav ul a {
 button.likesbtn.like-count {
     color: #2296F3 !important;
     font-size: 13px !important;
+}
+
+/* Slider Banner Text */
+.myBannerText {
+    font-family: 'Playball', cursive !important;
 }

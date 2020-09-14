@@ -22,7 +22,8 @@ def index():
 @app.route('/get_recipes')
 def get_recipes():
     return render_template('recipes.html', 
-    recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find(),
+    ads=mongo.db.ads.find())
 
 # This functionality allows user to click on the Like button and it will increment the total count
 @app.route('/like/<recipe_id>', methods=["POST"])
