@@ -1,4 +1,3 @@
-
 import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
@@ -90,6 +89,59 @@ def edit_category(category_id):
     return render_template('editcategory.html', 
     category=mongo.db.categories.find_one({'_id': ObjectId(category_id)}))
 
+# This route will POST any updated fields to the database.
+@app.route('/update_category/<category_id>', methods=['POST'])
+def update_category(category_id):
+    categories = mongo.db.categories
+    categories.update({'_id': ObjectId(category_id)},
+    {
+            'category_name':request.form.get('category_name'),
+            'category_description':request.form.get('category_description'),
+            'category_img_url':request.form.get('category_img_url')
+            
+    })
+    return redirect(url_for('get_categories'))
+
+# This route will insert a new category into the database.
+@app.route('/insert_category', methods=['POST'])
+def insert_category():
+    categories = mongo.db.categories
+    category_doc = {
+        'category_name': request.form.get('category_name'),
+        'category_description': request.form.get('category_description'),
+        'category_img_url': request.form.get('category_img_url')
+    }
+    categories.insert_one(category_doc)
+    return redirect(url_for('get_categories'))
+
+# This route will render the addcategory page   
+@app.route('/add_category')
+def add_category():
+    return render_template('addcategory.html')
+
+# This route will render the ads page to view ads    
+@app.route('/get_ads')
+def get_ads():
+    return render_template('ads.html', 
+    ads=mongo.db.ads.find())
+
+# This route will render the editad.html page in order to edit the specific ad selected  
+@app.route('/edit_ad/<ad_id>')
+def edit_ad(ad_id):
+    return render_template('editad.html', 
+    ad=mongo.db.ads.find_one({'_id': ObjectId(ad_id)}))
+
+# This route will update the specific ad into the database.
+@app.route('/update_ad/<ad_id>', methods=['POST'])
+def update_ad(ad_id):
+    ads = mongo.db.ads
+    ads.update({'_id': ObjectId(ad_id)},
+    {
+            'ad_url_one':request.form.get('ad_url_one'),
+            'ad_promo_name':request.form.get('ad_promo_name')
+            
+    })
+    return redirect(url_for('get_ads'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
