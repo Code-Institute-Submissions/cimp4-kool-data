@@ -35,3 +35,25 @@ nav ul a {
     font-size: 10px;
     font-style: italic !important;
 }
+
+/* Like button styling */
+.likesbtn {
+    border:0;
+    background: transparent;
+    text-align:right;
+    padding-right: 0;
+    
+}
+
+.likesbtn i {
+   margin-right:5px; 
+}
+
+.like-count {
+    float:right;
+}
+
+button.likesbtn.like-count {
+    color: #2296F3 !important;
+    font-size: 13px !important;
+}
