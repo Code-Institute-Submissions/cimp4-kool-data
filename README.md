@@ -97,6 +97,7 @@ Testing for Creating a Recipe included that all fields were recorded accordingly
 #### Cross-Device and Browser Testing
 The browser that I used for developing in GitPod was Chrome. However, I tested on Safari and Mozilla Firefox which didn't show any issues.
 As the most important approach being Mobile First Approach, it was important to test the responsiveness on different devices and browser simulators.
+Website used for testing responsivenes [Am I Responsive ?](http://ami.responsivedesign.is/#)
 
 #### Devices tested on included:
 
@@ -105,7 +106,10 @@ As the most important approach being Mobile First Approach, it was important to 
 - Goole Pixel 2, 2XL
 - iPad, iPad Mini, iPad Air, iPad Pro
 
-Overall responsiveness is to my satisfaction. 
+Overall responsiveness is to my satisfaction. (See image below for cross device responsiveness)
+
+![N|Solid](https://www.linkpicture.com/q/crossdevicetesting.png)
+
 
 #### Code Validation
 Good Coding Practice Requires that all codes are validated through online validators, in order to check if there are errors.
