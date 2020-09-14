@@ -1,8 +1,10 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
+from dotenv import load_dotenv
 from bson.objectid import ObjectId
 
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -11,7 +13,7 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 mongo = PyMongo(app)
 
-@app.route('/', methods=["GET"])
+@app.route('/')
 def index():
     return render_template('recipes.html', 
     recipes=mongo.db.recipes.find(),
