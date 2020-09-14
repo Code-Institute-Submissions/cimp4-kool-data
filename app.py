@@ -78,6 +78,19 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
 
+# This route will render all categories on the categories.html page
+@app.route('/get_categories')
+def get_categories():
+    return render_template('categories.html',
+    categories=mongo.db.categories.find())  
+
+# This route will render the editcategory.html page in order to edit the specific category selected  
+@app.route('/edit_category/<category_id>')
+def edit_category(category_id):
+    return render_template('editcategory.html', 
+    category=mongo.db.categories.find_one({'_id': ObjectId(category_id)}))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
