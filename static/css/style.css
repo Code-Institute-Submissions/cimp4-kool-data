@@ -34,6 +34,7 @@ nav ul a {
     background-image: linear-gradient(white, white, powderblue) !important;
 }
 
+
 /* Category Type Card */
 .myImgStyle {
     width:100%;height:175px; 
@@ -75,3 +76,4 @@ button.likesbtn.like-count {
 .myBannerText {
     font-family: 'Playball', cursive !important;
 }
+
