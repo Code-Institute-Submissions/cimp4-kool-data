@@ -41,7 +41,21 @@
         <script>
             $(document).ready(function(){
                 $('.sidenav').sidenav();
-                
+                $('.slider').slider();
+                $('.collapsible').collapsible();
+                $('select').formSelect();
+                $('input#input_text, textarea#recipe_description').characterCounter();
+                $('#textarea1').val('New Text');
+                M.textareaAutoResize($('#textarea1'));
+                $('select').material_select(); //Make Fields required for submission
+
+                // for HTML5 "required" attribute
+                $("select[required]").css({
+                  display: "inline",
+                  height: 0,
+                  padding: 0,
+                  width: 0
+                });
             });
         </script>   
     </body>
